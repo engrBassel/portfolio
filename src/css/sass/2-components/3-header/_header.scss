@@ -1,0 +1,90 @@
+@use "../../0-helpers/helpers" as *;
+
+#header {
+  min-height: 100px;
+  @include box-shadow();
+  .container {
+    @include flex-j-a(space-between, center);
+    .name-logo {
+      padding: {
+        top: 1em;
+        bottom: 1em;
+      }
+      font-weight: normal;
+      a {
+        padding: 0.5em;
+      }
+    }
+    .navbar {
+      position: relative;
+      .nav__icon {
+        @include media(max-tablet) {
+          position: relative;
+          width: 30px;
+          height: 20px;
+          .nav__icon__line {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background-color: $main-grey;
+            &:nth-child(2) {
+              top: 50%;
+              @include transform(translateY(-50%));
+            }
+            &:last-child {
+              bottom: 0;
+            }
+          }
+          &.active {
+            :nth-child(2) {
+              opacity: 0;
+            }
+            :is(:first-child, :last-child) {
+              top: 50%;
+              background-color: $main-red;
+            }
+            :first-child {
+              @include transform(translateY(-50%) rotate(45deg));
+            }
+            :last-child {
+              @include transform(translateY(-50%) rotate(-45deg));
+            }
+          }
+        }
+      }
+      .nav__items {
+        @include flex-j-a(space-between, center);
+        gap: 0.5rem;
+        @include media(max-tablet) {
+          position: absolute;
+          top: 160%;
+          right: 0;
+          z-index: 3;
+          flex-direction: column;
+          background-color: $main-white;
+          @include transform($t: rotateX(90deg));
+          transform-origin: top;
+          &.active {
+            padding: 0.5em;
+            @include box-shadow();
+            @include transform($t: rotateX(0deg));
+            @include border-radius(2rem);
+          }
+        }
+        .nav__items__item {
+          @include flex-j-a(center, center);
+          .nav__items__item__link {
+            text-transform: capitalize;
+            padding: 0.5em;
+            font-size: 1.5rem;
+            @include border-radius(2rem);
+            &:hover {
+              background-color: $main-grey;
+              color: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@use "../0-helpers/helpers" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  @include transition;
+}
+
+@include media(min-tablet) {
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $main-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $main-color;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: $main-grey;
+  cursor: url("/cursor.png"), auto;
+}
+
+.container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  @include media(min-laptop) {
+    width: 75%;
+  }
+}
+
+.section {
+  @extend .container;
+  padding: {
+    top: 2rem;
+    bottom: 2rem;
+  }
+}
+
+.section-full {
+  @extend .section;
+  @include media(min-laptop) {
+    min-height: 100svh;
+  }
+}
+
+.main-box {
+  padding: 1.5rem;
+  border: 2px solid $light-grey;
+  @include box-shadow();
+  @include border-radius();
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  @include media(max-tablet) {
+    cursor: default;
+  }
+  @include media(min-laptop) {
+    cursor: pointer;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

@@ -1,0 +1,346 @@
+@use "../../0-helpers/helpers" as *;
+
+// landing section start
+#landing-section {
+  @include flex-j-a-g(space-evenly, center, 1rem 2rem);
+  @include media(max-tablet) {
+    flex-direction: column;
+  }
+  @include media(min-laptop) {
+    min-height: calc(100svh - 100px);
+  }
+  .landing__img {
+    overflow: hidden;
+    box-shadow: 0 0 10px 5px $main-color;
+    background-color: #1f1f1f;
+    @include border-radius(50%);
+    @include media(max-tablet) {
+      max-width: 230px;
+    }
+    @include media(min-laptop) {
+      max-width: 400px;
+    }
+    img {
+      @include transform(translateX(-100%));
+      @include animation(move-right, 2s, ease-out, 1s, 1, normal, forwards);
+    }
+    @keyframes move-right {
+      to {
+        @include transform(translateX(0));
+      }
+    }
+  }
+  .landing__info {
+    &,
+    .landing__info__text {
+      @include flex-justify(center);
+      flex-direction: column;
+    }
+    gap: 1rem;
+    @media (max-width: "#{calc(387.9 / 16)}em") {
+      min-width: 281px;
+    }
+    @media (min-width: "#{calc(388 / 16)}em") {
+      min-width: 351px;
+    }
+    .landing__info__text {
+      align-items: center;
+      gap: 0.5rem;
+      p,
+      h3 {
+        color: $sec-grey;
+      }
+      p {
+        font-weight: bold;
+      }
+      h2 {
+        overflow: hidden;
+        border-right: 1px solid $main-grey;
+        width: 0;
+        white-space: nowrap;
+        text-align: center;
+        font-size: 3rem;
+        @include multi-animation(
+          $animations: (
+            (
+              "n": typewriter,
+              "du": 2s,
+              "tf": steps(28),
+              "dl": 1s,
+              "ic": 1,
+              "di": normal,
+              "fm": forwards
+            ),
+            (
+              "n": blind,
+              "du": 0.3s,
+              "tf": ease,
+              "dl": 0s,
+              "ic": 12,
+              "di": normal,
+              "fm": forwards
+            ),
+          )
+        );
+        @media (max-width: "#{calc(387.9 / 16)}em") {
+          font-size: 2.4rem;
+        }
+        @keyframes blind {
+          from {
+            border-right-color: $main-grey;
+          }
+          to {
+            border-right-color: transparent;
+          }
+        }
+        @keyframes typewriter {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+    .landing__info__buttons,
+    .landing__info__links {
+      @include flex-justify-g(center, 1rem);
+    }
+    .landing__info__buttons {
+      button,
+      a {
+        flex: 1;
+        text-align: center;
+        font-size: 1rem;
+        @media (max-width: "#{calc(387.9 / 16)}em") {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}
+// landing section end
+
+// about section start
+#about {
+  @include grid-temp-rows-pitems-g(auto 1fr, center, 2rem);
+  .about-content {
+    .about-content__boxes {
+      @include flex-justify-g(center, 2rem 4rem);
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+      .main-box {
+        @include grid-pitems-g(center, 1rem);
+        max-width: max(30%, 341px);
+        text-align: center;
+        .box__heading {
+          position: relative;
+          padding: 1rem;
+          width: calc(100% + 3rem + 20px);
+          background-color: $main-bg;
+          text-transform: uppercase;
+          font-size: 1rem;
+          color: $main-color;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 5px;
+            background-color: $main-bg;
+          }
+          &::before {
+            left: 0;
+            bottom: -4.7px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+          }
+          &::after {
+            right: 0;
+            top: -4.7px;
+            clip-path: polygon(0 0, 0 100%, 100% 100%);
+          }
+        }
+        .box__paragraph {
+          line-height: 1.5;
+          color: $sec-grey;
+        }
+      }
+    }
+    article {
+      line-height: 2;
+      color: $sec-grey;
+      @media (max-width: "#{calc(1079.9 / 16)}em") {
+        text-align: center;
+      }
+      @include media(min-tablet) {
+        font-size: 1.5rem;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+// about section end
+
+// skills section start
+#skills {
+  @include grid-temp-rows-pitems-g(auto 1fr, center stretch, 2rem);
+  .skills__content {
+    @include flex-gap(2rem 4rem);
+    @include media(max-mobile) {
+      flex-direction: column;
+    }
+    .skills__content__box {
+      flex: 1;
+      h5 {
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: 1.3rem;
+        color: $sec-grey;
+        @media (min-width: "#{calc(350 / 16)}em") {
+          font-size: 1.5rem;
+        }
+      }
+      .skills__content__box__items {
+        @include grid-temp-cols-g(
+          repeat(auto-fit, minmax(180px, 1fr)),
+          2rem 3rem
+        );
+        .skill {
+          @include grid-temp-cols(1fr 3fr);
+          svg {
+            justify-self: center;
+          }
+          .skill__text {
+            justify-self: start;
+            position: relative;
+            top: -2px;
+            h6 {
+              font-size: 1.2rem;
+              margin-bottom: 0.3rem;
+            }
+            p {
+              color: $sec-grey;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// skills section end
+
+// projects section start
+#projects {
+  .main-heading {
+    margin-bottom: 2rem;
+  }
+  .projects {
+    @include grid-jitems-g(center, 2rem 1rem);
+    @include media(min-tablet) {
+      grid-template-columns: repeat(auto-fit, minmax(337px, 1fr));
+    }
+    .project {
+      @include grid-aitems-g(center, 1rem);
+      overflow: hidden;
+      max-width: 337px;
+      &:hover .project__title {
+        box-shadow: 0 0 0 500px $main-color;
+        background-color: $main-bg;
+        color: $main-color;
+      }
+      .project__title {
+        position: relative;
+        z-index: -1;
+        padding: 1rem;
+        background-color: $main-color;
+        text-align: center;
+        font-size: 1.75rem;
+        @include border-radius();
+      }
+      .project__img {
+        img {
+          border: 2px solid $main-color;
+          @include border-radius(1rem);
+        }
+      }
+      .project__techs {
+        &,
+        .project__tech {
+          @include flex-j-a(center, center);
+        }
+        flex-wrap: wrap;
+        gap: 10px;
+        .project__tech {
+          gap: 3px;
+        }
+      }
+      .project__btns {
+        @include flex-justify-g(center, 1rem);
+        flex-wrap: wrap;
+        button {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+.more-projects {
+  &,
+  a {
+    @include flex-j-a(center, center);
+  }
+  padding-top: 2rem;
+  a {
+    gap: 0.5rem;
+    &:hover {
+      gap: 1rem;
+    }
+  }
+}
+// projects section end
+
+// contact section start
+#contact {
+  @include grid-temp-rows-pitems-g(auto 1fr, center, 2rem);
+  @include media(min-laptop) {
+    min-height: calc(100svh - 81.6px);
+  }
+  .contact__boxes {
+    @include flex-justify-g(center, 1.5rem);
+    flex-wrap: wrap;
+    background-color: #fafafa;
+    @include media(max-mobile) {
+      flex-direction: column;
+    }
+    .contact__box {
+      @include flex-align-g(center, 0.5rem);
+      svg,
+      a {
+        @media (min-width: "#{calc(400 / 16)}em") {
+          font-size: 1.4rem;
+        }
+      }
+      svg {
+        padding: 10px;
+        background-color: $main-bg;
+        color: $main-color;
+        @include border-radius(50%);
+      }
+      a {
+        &:hover {
+          color: $light-grey;
+          text-decoration: underline;
+          -moz-text-underline-offset: 1rem;
+          text-underline-offset: 1rem;
+          -moz-text-decoration-color: $light-grey;
+          text-decoration-color: $light-grey;
+        }
+      }
+    }
+  }
+}
+// contact section end
