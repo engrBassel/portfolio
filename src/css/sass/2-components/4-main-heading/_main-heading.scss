@@ -1,0 +1,11 @@
+@use "../../0-helpers/helpers" as *;
+
+.main-heading {
+  @include grid-pitems-g(center, 0.5rem);
+  p {
+    color: $sec-grey;
+  }
+  h4 {
+    font-size: 3rem;
+  }
+}

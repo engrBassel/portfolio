@@ -1,0 +1,14 @@
+@use "../../0-helpers/helpers" as *;
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  height: 10px;
+  background-color: $main-color;
+  box-shadow: 0 1px 5px $light-grey;
+  @include transition(0s);
+  @include media(max-tablet) {
+    display: none;
+  }
+}

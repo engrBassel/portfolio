@@ -1,0 +1,74 @@
+@use "../../0-helpers/helpers" as *;
+
+button:disabled {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  cursor: not-allowed;
+}
+
+.btn,
+.btn--outline {
+  border: 3px solid $main-grey;
+  padding: 1rem 1.5rem;
+  font: {
+    weight: bold;
+    family: inherit;
+  }
+  @include border-radius($r: 2rem);
+  @include media(min-laptop) {
+    cursor: pointer;
+  }
+}
+
+.btn {
+  background-color: $main-grey;
+  color: $main-color;
+  &:hover {
+    border-color: $main-black;
+    background-color: $main-black;
+  }
+}
+
+.btn--outline {
+  background-color: transparent;
+  &:hover {
+    background-color: $main-grey;
+    color: $main-color;
+  }
+}
+
+.next-section-arrow,
+.go-top {
+  position: absolute;
+  svg {
+    padding: 5px;
+    background-color: $main-bg;
+    color: $main-color;
+    @include box-shadow();
+    @include border-radius(50%);
+    &:hover {
+      background-color: $main-black;
+    }
+  }
+}
+
+.next-section-arrow {
+  right: -10%;
+  bottom: 10px;
+  @include media(max-tablet) {
+    display: none;
+  }
+}
+
+.go-top {
+  @include media(max-tablet) {
+    right: 50%;
+    bottom: 0.5rem;
+    @include transform($t: translateX(50%));
+  }
+  @include media(min-laptop) {
+    right: 5%;
+    bottom: 50%;
+    @include transform($t: translateY(50%));
+  }
+}

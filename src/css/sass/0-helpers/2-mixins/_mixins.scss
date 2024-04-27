@@ -1,0 +1,201 @@
+@use "../1-variables/variables" as *;
+@use "sass:map";
+@use "sass:list";
+
+// animations start
+@mixin animation($n, $du, $tf: ease, $dl: 0s, $ic: 1, $di: normal, $fm: none) {
+  -webkit-animation: $n $du $tf $dl $ic $di $fm;
+  animation: $n $du $tf $dl $ic $di $fm;
+}
+
+@mixin multi-animation($animations) {
+  $result: "";
+  @each $animation in $animations {
+    $result: #{$result +
+      map.get($animation, "n")
+      map.get($animation, "du")
+      map.get($animation, "tf")
+      map.get($animation, "dl")
+      map.get($animation, "ic")
+      map.get($animation, "di")
+      map.get($animation, "fm")};
+    @if $animation != list.nth($animations, -1) {
+      $result: #{$result + ","};
+    }
+  }
+  -webkit-animation: $result;
+  animation: $result;
+}
+// to use multi-animation mixin:
+/*
+  @include animation(
+    (
+      ("n":name,"du":duration,"tf":time-function,"dl":delay,"ic":iteration-count,"di":direction,"fm":fill-mode),
+      ("n":name,"du":duration,"tf":time-function,"dl":delay,"ic":iteration-count,"di":direction,"fm":fill-mode)
+    )
+  )
+*/
+// animations end
+
+// display start
+
+// Flex start
+@mixin flex-gap($g) {
+  display: flex;
+  gap: $g;
+}
+
+@mixin flex-justify($j) {
+  display: flex;
+  justify-content: $j;
+}
+
+@mixin flex-justify-g($j, $g) {
+  display: flex;
+  justify-content: $j;
+  gap: $g;
+}
+
+@mixin flex-align($a) {
+  display: flex;
+  align-items: $a;
+}
+
+@mixin flex-align-g($a, $g) {
+  display: flex;
+  align-items: $a;
+  gap: $g;
+}
+
+@mixin flex-j-a($j, $a) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+}
+
+@mixin flex-j-a-g($j, $a, $g) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+  gap: $g;
+}
+// Flex end
+
+// Grid start
+@mixin grid-jitems($jitems) {
+  display: grid;
+  justify-items: $jitems;
+}
+
+@mixin grid-jitems-g($jitems, $g) {
+  display: grid;
+  justify-items: $jitems;
+  gap: $g;
+}
+
+@mixin grid-aitems($aitems) {
+  display: grid;
+  align-items: $aitems;
+}
+
+@mixin grid-aitems-g($aitems, $g) {
+  display: grid;
+  align-items: $aitems;
+  gap: $g;
+}
+
+@mixin grid-pitems-g($pitems, $g) {
+  display: grid;
+  place-items: $pitems;
+  gap: $g;
+}
+
+@mixin grid-pcontent-g($pcontent, $g) {
+  display: grid;
+  place-content: $pcontent;
+  gap: $g;
+}
+
+@mixin grid-pitems-pcontent($pitems, $pcontent) {
+  display: grid;
+  place-items: $pitems;
+  place-content: $pcontent;
+}
+
+@mixin grid-pitems-pcontent-g($pitems, $pcontent, $g) {
+  display: grid;
+  place-items: $pitems;
+  place-content: $pcontent;
+  gap: $g;
+}
+
+@mixin grid-temp-cols($grid-temp) {
+  display: grid;
+  grid-template-columns: $grid-temp;
+}
+
+@mixin grid-temp-cols-g($grid-temp, $g) {
+  display: grid;
+  grid-template-columns: $grid-temp;
+  gap: $g;
+}
+
+@mixin grid-temp-rows-pitems-g($grid-temp, $pitems, $g) {
+  display: grid;
+  grid-template-rows: $grid-temp;
+  place-items: $pitems;
+  gap: $g;
+}
+// Grid end
+
+// display end
+
+@mixin transform($t) {
+  -webkit-transform: $t;
+  -moz-transform: $t;
+  -ms-transform: $t;
+  -o-transform: $t;
+  transform: $t;
+}
+
+@mixin transition($t: all $main-duration ease) {
+  -webkit-transition: $t;
+  -moz-transition: $t;
+  -ms-transition: $t;
+  -o-transition: $t;
+  transition: $t;
+}
+
+@mixin border-radius($r: $main-border-radius) {
+  -webkit-border-radius: $r;
+  -moz-border-radius: $r;
+  -ms-border-radius: $r;
+  -o-border-radius: $r;
+  border-radius: $r;
+}
+
+@mixin box-shadow() {
+  box-shadow: 0 0 10px $light-grey;
+}
+
+// media queries start
+@mixin media($m) {
+  @if $m == max-mobile {
+    @media (max-width: "#{calc(767.9 / 16)}em") {
+      @content;
+    }
+  } @else if $m == min-tablet {
+    @media (min-width: "#{calc(768 / 16)}em") {
+      @content;
+    }
+  } @else if $m == max-tablet {
+    @media (max-width: "#{calc(1023.9 / 16)}em") {
+      @content;
+    }
+  } @else if $m == min-laptop {
+    @media (min-width: "#{calc(1024 / 16)}em") {
+      @content;
+    }
+  }
+}
+// media queries end

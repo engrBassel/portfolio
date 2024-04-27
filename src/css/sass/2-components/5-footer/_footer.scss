@@ -1,0 +1,40 @@
+@use "../../0-helpers/helpers" as *;
+
+#footer {
+  position: relative;
+  padding: {
+    top: 0.25rem;
+    bottom: 0.25rem;
+  }
+  background-color: $main-bg;
+  color: $main-color;
+  @include box-shadow();
+  @include media(max-tablet) {
+    padding-bottom: 4rem;
+  }
+  .navbar {
+    .nav__items {
+      @include flex-j-a-g(center, center, 0.25rem 1rem);
+      .nav__items__item {
+        @include flex-j-a(center, center);
+        .nav__items__item__link {
+          padding: 0.5em;
+          text-transform: capitalize;
+          font-size: 1.3rem;
+          color: $main-color;
+          @include border-radius(2rem);
+          &:hover {
+            background-color: $main-black;
+          }
+          @media (min-width: "#{calc(344 / 16)}em") {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  p {
+    margin-top: 0.25rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,11 @@
+@use "../../0-helpers/helpers" as *;
+
+.not-found {
+  @include grid-pitems-pcontent(center, center);
+  height: calc(100svh - 100px);
+  font-size: 3rem;
+  span {
+    font-weight: bold;
+    color: $main-red;
+  }
+}
