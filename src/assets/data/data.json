@@ -21,6 +21,23 @@
   },
   "projects": [
     {
+      "title": "Prayer Times",
+      "alt": "Prayer Times project image",
+      "techs": [
+        { "name": "Vite", "color": "#9c5dfe" },
+        { "name": "React", "color": "#149eca" },
+        { "name": "TypeScript", "color": "#2f74c0" },
+        { "name": "API", "color": "#92d050" },
+        { "name": "Axios", "color": "#5a29e4" },
+        { "name": "Luxon", "color": "#8065b4" },
+        { "name": "Material UI", "color": "#007fff" }
+      ],
+      "links": {
+        "repo": "prayer-times",
+        "deploy": "https://salawaty.netlify.app/"
+      }
+    },
+    {
       "title": "This Portfolio",
       "alt": "This Portfolio project image",
       "techs": [
@@ -29,7 +46,7 @@
         { "name": "TypeScript", "color": "#2f74c0" },
         { "name": "SASS", "color": "#c6538c" }
       ],
-      "repo": "portfolio"
+      "links": { "repo": "portfolio", "deploy": "" }
     },
     {
       "title": "Shopping Cart",
@@ -41,7 +58,7 @@
         { "name": "Redux Toolkit", "color": "#593d88" },
         { "name": "Axios", "color": "#5a29e4" }
       ],
-      "repo": "shopping-cart"
+      "links": { "repo": "shopping-cart", "deploy": "github" }
     },
     {
       "title": "Hangman Game",
@@ -51,7 +68,7 @@
         { "name": "CSS", "color": "#563d7c" },
         { "name": "JavaScript", "color": "#f1e05a" }
       ],
-      "repo": "hangman-game"
+      "links": { "repo": "hangman-game", "deploy": "github" }
     },
     {
       "title": "Quiz App",
@@ -61,7 +78,7 @@
         { "name": "CSS", "color": "#563d7c" },
         { "name": "JavaScript", "color": "#f1e05a" }
       ],
-      "repo": "quiz-app"
+      "links": { "repo": "quiz-app", "deploy": "github" }
     },
     {
       "title": "Memory Game",
@@ -71,7 +88,7 @@
         { "name": "CSS", "color": "#563d7c" },
         { "name": "JavaScript", "color": "#f1e05a" }
       ],
-      "repo": "memory-game"
+      "links": { "repo": "memory-game", "deploy": "github" }
     },
     {
       "title": "Typing Test",
@@ -81,7 +98,7 @@
         { "name": "CSS", "color": "#563d7c" },
         { "name": "JavaScript", "color": "#f1e05a" }
       ],
-      "repo": "typing-speed-test"
+      "links": { "repo": "typing-speed-test", "deploy": "github" }
     },
     {
       "title": "Image Slider",
@@ -91,7 +108,7 @@
         { "name": "CSS", "color": "#563d7c" },
         { "name": "JavaScript", "color": "#f1e05a" }
       ],
-      "repo": "image-slider"
+      "links": { "repo": "image-slider", "deploy": "github" }
     },
     {
       "title": "Serial Generator",
@@ -101,7 +118,7 @@
         { "name": "CSS", "color": "#563d7c" },
         { "name": "JavaScript", "color": "#f1e05a" }
       ],
-      "repo": "serial-generator"
+      "links": { "repo": "serial-generator", "deploy": "github" }
     },
     {
       "title": "Repos Fetch",
@@ -111,7 +128,7 @@
         { "name": "CSS", "color": "#563d7c" },
         { "name": "JavaScript", "color": "#f1e05a" }
       ],
-      "repo": "github-repos-fetching"
+      "links": { "repo": "github-repos-fetching", "deploy": "github" }
     },
     {
       "title": "Countdown Timer",
@@ -121,7 +138,7 @@
         { "name": "CSS", "color": "#563d7c" },
         { "name": "JavaScript", "color": "#f1e05a" }
       ],
-      "repo": "countdown-timer"
+      "links": { "repo": "countdown-timer", "deploy": "github" }
     },
     {
       "title": "Template 4",
@@ -130,7 +147,7 @@
         { "name": "HTML", "color": "#e34c26" },
         { "name": "CSS", "color": "#563d7c" }
       ],
-      "repo": "template4"
+      "links": { "repo": "template4", "deploy": "github" }
     },
     {
       "title": "Template 3",
@@ -139,7 +156,7 @@
         { "name": "HTML", "color": "#e34c26" },
         { "name": "CSS", "color": "#563d7c" }
       ],
-      "repo": "template3"
+      "links": { "repo": "template3", "deploy": "github" }
     },
     {
       "title": "Template 2",
@@ -148,7 +165,7 @@
         { "name": "HTML", "color": "#e34c26" },
         { "name": "CSS", "color": "#563d7c" }
       ],
-      "repo": "template2"
+      "links": { "repo": "template2", "deploy": "github" }
     },
     {
       "title": "Template 1",
@@ -157,7 +174,7 @@
         { "name": "HTML", "color": "#e34c26" },
         { "name": "CSS", "color": "#563d7c" }
       ],
-      "repo": "template1"
+      "links": { "repo": "template1", "deploy": "github" }
     }
   ]
 }

@@ -1,3 +1,4 @@
+import prayerTimesImgSrc from "../../../assets/images/prayer-times.png";
 import thisPortfolioImgSrc from "../../../assets/images/this-portfolio.png";
 import shoppingCartImgSrc from "../../../assets/images/shopping-cart.png";
 import hangmanGameImgSrc from "../../../assets/images/hangman-game.png";
@@ -14,6 +15,7 @@ import template2ImgSrc from "../../../assets/images/template2.png";
 import template1ImgSrc from "../../../assets/images/template1.png";
 
 const imgSrcs = [
+  prayerTimesImgSrc,
   thisPortfolioImgSrc,
   shoppingCartImgSrc,
   hangmanGameImgSrc,

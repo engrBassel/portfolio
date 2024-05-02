@@ -11,17 +11,17 @@ function Projects() {
             title: string;
             alt: string;
             techs: { name: string; color: string }[];
-            repo: string;
+            links: { repo: string; deploy: string };
           },
           indx: number
         ) => (
           <Project
-            key={project.repo}
+            key={project.links.repo}
             title={project.title}
             imgSrc={imgSrcs[indx]}
             alt={project.alt}
             techs={project.techs}
-            repo={project.repo}
+            links={project.links}
           />
         )
       )}

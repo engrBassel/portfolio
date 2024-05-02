@@ -7,13 +7,13 @@ function Project({
   imgSrc,
   alt,
   techs,
-  repo,
+  links,
 }: {
   title: string;
   imgSrc: string;
   alt: string;
   techs: { name: string; color: string }[];
-  repo: string;
+  links: { repo: string; deploy: string };
 }) {
   return (
     <div className="project main-box">
@@ -35,7 +35,7 @@ function Project({
           )
         )}
       </div>
-      <ProjectBtns repo={repo} />
+      <ProjectBtns links={links} />
     </div>
   );
 }
