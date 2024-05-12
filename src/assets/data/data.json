@@ -4,19 +4,27 @@
     "front": [
       { "name": "HTML", "level": "Experienced" },
       { "name": "CSS", "level": "Intermediate" },
-      { "name": "JavaScript", "level": "Intermediate" },
+      { "name": "JavaScript (ES6+)", "level": "Intermediate" },
       { "name": "Bootstrap", "level": "Intermediate" },
+      { "name": "Tailwindcss", "level": "basic" },
       { "name": "Sass", "level": "Intermediate" },
       { "name": "Jest", "level": "Basic" },
       { "name": "TypeScript", "level": "Intermediate" },
-      { "name": "React", "level": "Intermediate" },
-      { "name": "Redux", "level": "Basic" }
+      { "name": "ReactJS", "level": "Intermediate" },
+      { "name": "Redux Toolkit", "level": "Basic" },
+      { "name": "Axios", "level": "Basic" },
+      { "name": "Material UI", "level": "Basic" },
+      { "name": "Luxon", "level": "Basic" },
+      { "name": "Vitest", "level": "Basic" }
     ],
     "general": [
       { "name": "Data Structures and Algorithms", "level": "Basic" },
       { "name": "Design Patterns", "level": "Basic" },
-      { "name": "Git", "level": "Intermediate" },
-      { "name": "Problem Solving", "level": "Intermediate" }
+      { "name": "Problem Solving", "level": "Intermediate" },
+      { "name": "Git & GitHub", "level": "Intermediate" },
+      { "name": "Communication", "level": "Basic" },
+      { "name": "Learning Agility", "level": "Intermediate" },
+      { "name": "Leadership", "level": "Basic" }
     ]
   },
   "projects": [
@@ -99,82 +107,6 @@
         { "name": "JavaScript", "color": "#f1e05a" }
       ],
       "links": { "repo": "typing-speed-test", "deploy": "github" }
-    },
-    {
-      "title": "Image Slider",
-      "alt": "Image Slider Project Image",
-      "techs": [
-        { "name": "HTML", "color": "#e34c26" },
-        { "name": "CSS", "color": "#563d7c" },
-        { "name": "JavaScript", "color": "#f1e05a" }
-      ],
-      "links": { "repo": "image-slider", "deploy": "github" }
-    },
-    {
-      "title": "Serial Generator",
-      "alt": "Serial Generator Project Image",
-      "techs": [
-        { "name": "HTML", "color": "#e34c26" },
-        { "name": "CSS", "color": "#563d7c" },
-        { "name": "JavaScript", "color": "#f1e05a" }
-      ],
-      "links": { "repo": "serial-generator", "deploy": "github" }
-    },
-    {
-      "title": "Repos Fetch",
-      "alt": "Repos Fetch Project Image",
-      "techs": [
-        { "name": "HTML", "color": "#e34c26" },
-        { "name": "CSS", "color": "#563d7c" },
-        { "name": "JavaScript", "color": "#f1e05a" }
-      ],
-      "links": { "repo": "github-repos-fetching", "deploy": "github" }
-    },
-    {
-      "title": "Countdown Timer",
-      "alt": "Countdown Timer Project Image",
-      "techs": [
-        { "name": "HTML", "color": "#e34c26" },
-        { "name": "CSS", "color": "#563d7c" },
-        { "name": "JavaScript", "color": "#f1e05a" }
-      ],
-      "links": { "repo": "countdown-timer", "deploy": "github" }
-    },
-    {
-      "title": "Template 4",
-      "alt": "Template 4 Project Image",
-      "techs": [
-        { "name": "HTML", "color": "#e34c26" },
-        { "name": "CSS", "color": "#563d7c" }
-      ],
-      "links": { "repo": "template4", "deploy": "github" }
-    },
-    {
-      "title": "Template 3",
-      "alt": "Template 3 Project Image",
-      "techs": [
-        { "name": "HTML", "color": "#e34c26" },
-        { "name": "CSS", "color": "#563d7c" }
-      ],
-      "links": { "repo": "template3", "deploy": "github" }
-    },
-    {
-      "title": "Template 2",
-      "alt": "Template 2 Project Image",
-      "techs": [
-        { "name": "HTML", "color": "#e34c26" },
-        { "name": "CSS", "color": "#563d7c" }
-      ],
-      "links": { "repo": "template2", "deploy": "github" }
-    },
-    {
-      "title": "Template 1",
-      "alt": "Template 1 Project Image",
-      "techs": [
-        { "name": "HTML", "color": "#e34c26" },
-        { "name": "CSS", "color": "#563d7c" }
-      ],
-      "links": { "repo": "template1", "deploy": "github" }
     }
   ]
 }
