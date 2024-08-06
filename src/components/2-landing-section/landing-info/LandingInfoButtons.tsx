@@ -5,7 +5,7 @@ function LandingInfoButtons() {
         type="button"
         title="Download my resume"
         className="btn--outline"
-        onClick={() => window.open("/bassel-mostafa-resume.pdf")}
+        onClick={() => window.open("/bassel-shaheen-resume.pdf")}
       >
         My Resume
       </button>
