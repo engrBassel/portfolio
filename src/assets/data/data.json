@@ -57,18 +57,6 @@
       "links": { "repo": "portfolio", "deploy": "" }
     },
     {
-      "title": "Shopping Cart",
-      "alt": "Shopping Cart Project Image",
-      "techs": [
-        { "name": "Vite", "color": "#9c5dfe" },
-        { "name": "React", "color": "#149eca" },
-        { "name": "TypeScript", "color": "#2f74c0" },
-        { "name": "Redux Toolkit", "color": "#593d88" },
-        { "name": "Axios", "color": "#5a29e4" }
-      ],
-      "links": { "repo": "shopping-cart", "deploy": "github" }
-    },
-    {
       "title": "Hangman Game",
       "alt": "Hangman Game Project Image",
       "techs": [
