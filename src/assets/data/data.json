@@ -31,6 +31,33 @@
   },
   "projects": [
     {
+      "title": "Business",
+      "alt": "Business Management Platform image",
+      "techs": [
+        { "name": "React", "color": "#149eca" },
+        { "name": "JavaScript", "color": "#f1e05a" },
+        { "name": "Redux Toolkit", "color": "#593d88" },
+        { "name": "React Router", "color": "#f44250" },
+        { "name": "Firebase", "color": "#dd2c00" },
+        { "name": "Tailwind CSS", "color": "#38bdf8" }
+      ],
+      "links": {
+        "repo": "business-management-platform",
+        "deploy": "https://my-business2024.web.app/"
+      }
+    },
+    {
+      "title": "E-commerce",
+      "alt": "E-commerce Platform project image",
+      "techs": [
+        { "name": "React", "color": "#149eca" },
+        { "name": "JavaScript", "color": "#f1e05a" },
+        { "name": "Redux Toolkit", "color": "#593d88" },
+        { "name": "Tailwind CSS", "color": "#38bdf8" }
+      ],
+      "links": { "repo": "ecommerce-platform", "deploy": "github" }
+    },
+    {
       "title": "This Portfolio",
       "alt": "This Portfolio project image",
       "techs": [
