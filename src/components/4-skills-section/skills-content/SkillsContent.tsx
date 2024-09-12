@@ -4,8 +4,8 @@ import data from "../../../assets/data/data.json";
 function SkillsContent() {
   return (
     <div className="skills__content">
-      <SkillsBox h="Frontend Development" skills={data?.skills?.front} />
-      <SkillsBox h="General Skills" skills={data?.skills?.general} />
+      <SkillsBox h="Technologies" skills={data?.skills?.techs} />
+      <SkillsBox h="Concepts" skills={data?.skills?.concepts} />
     </div>
   );
 }

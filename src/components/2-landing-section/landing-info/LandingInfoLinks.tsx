@@ -4,8 +4,6 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import w3schoolsImgSrc from "/src/assets/images/w3schools.png";
-import sololearnImgSrc from "/src/assets/images/sololearn.png";
 
 function LandingInfoLinks() {
   return (
@@ -33,38 +31,6 @@ function LandingInfoLinks() {
         target="_blank"
       >
         <FontAwesomeIcon icon={faFreeCodeCamp} size="2x" />
-      </a>
-      <a
-        title="Go to my w3schools profile"
-        aria-label="Go to my w3schools profile"
-        href="https://www.w3profile.com/engrBassel"
-        target="_blank"
-      >
-        <div>
-          <img
-            src={w3schoolsImgSrc}
-            alt="w3schools logo"
-            width="32"
-            height="30"
-            decoding="async"
-          />
-        </div>
-      </a>
-      <a
-        title="Go to my sololearn profile"
-        aria-label="Go to my sololearn profile"
-        href="https://www.sololearn.com/en/profile/28460149"
-        target="_blank"
-      >
-        <div>
-          <img
-            src={sololearnImgSrc}
-            alt="sololearn logo"
-            width="31"
-            height="31"
-            decoding="async"
-          />
-        </div>
       </a>
     </div>
   );

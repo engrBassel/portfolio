@@ -1,5 +1,5 @@
 import AboutContentBox from "./AboutContentBox";
-import { faBook, faUserGraduate } from "@fortawesome/free-solid-svg-icons";
+import { faBook, faCode } from "@fortawesome/free-solid-svg-icons";
 
 function AboutContentBoxes() {
   return (
@@ -7,14 +7,12 @@ function AboutContentBoxes() {
       <AboutContentBox
         i={faBook}
         h="Education"
-        p="Bachelor of Computers Engineering and Automatic Control, Tanta
-        university, Jul 2021."
+        p="BSc in Computers Engineering, Tanta university - Jul 2021."
       />
       <AboutContentBox
-        i={faUserGraduate}
-        h="Graduation Project"
-        p="OnXams - Online exams platform graduation project, Excellent grade
-        (98%)."
+        i={faCode}
+        h="Training"
+        p="Front-End Web Development BootCamp, Sprints - Sep. 2024."
       />
     </div>
   );

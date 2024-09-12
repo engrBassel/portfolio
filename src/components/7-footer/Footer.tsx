@@ -7,7 +7,7 @@ function Footer() {
       <div className="container">
         <Navbar />
         <p>
-          Copyright &#169; {new Date().getFullYear()} Bassel Mostafa. All Rights
+          Copyright &#169; {new Date().getFullYear()} Bassel Shaheen. All Rights
           Reserved
         </p>
       </div>

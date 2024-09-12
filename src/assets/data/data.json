@@ -1,50 +1,35 @@
 {
   "sections": ["about", "skills", "projects", "contact"],
   "skills": {
-    "front": [
-      { "name": "HTML", "level": "Experienced" },
-      { "name": "CSS", "level": "Intermediate" },
+    "techs": [
+      { "name": "HTML5", "level": "Intermediate" },
+      { "name": "CSS3", "level": "Intermediate" },
       { "name": "JavaScript (ES6+)", "level": "Intermediate" },
-      { "name": "Bootstrap", "level": "Intermediate" },
-      { "name": "Tailwindcss", "level": "basic" },
-      { "name": "Sass", "level": "Intermediate" },
-      { "name": "Jest", "level": "Basic" },
+      { "name": "React.js", "level": "Intermediate" },
+      { "name": "Redux Toolkit", "level": "Intermediate" },
       { "name": "TypeScript", "level": "Intermediate" },
-      { "name": "ReactJS", "level": "Intermediate" },
-      { "name": "Redux Toolkit", "level": "Basic" },
-      { "name": "Axios", "level": "Basic" },
-      { "name": "Material UI", "level": "Basic" },
-      { "name": "Luxon", "level": "Basic" },
-      { "name": "Vitest", "level": "Basic" }
+      { "name": "Sass", "level": "Intermediate" },
+      { "name": "Tailwindcss", "level": "Intermediate" },
+      { "name": "Bootstrap", "level": "Intermediate" },
+      { "name": "Git & GitHub", "level": "Intermediate" },
+      { "name": "Next.js", "level": "Basic" },
+      { "name": "Firebase", "level": "Basic" }
     ],
-    "general": [
+    "concepts": [
+      { "name": "Responsive Design", "level": "Intermediate" },
+      { "name": "Dynamic Routing", "level": "Intermediate" },
+      { "name": "Protected Routes", "level": "Intermediate" },
+      { "name": "Authentication", "level": "Intermediate" },
+      { "name": "Authorization", "level": "Intermediate" },
+      { "name": "RESTful APIs", "level": "Intermediate" },
+      { "name": "Asynchronous Programming", "level": "Intermediate" },
+      { "name": "Problem Solving", "level": "Intermediate" },
       { "name": "Data Structures and Algorithms", "level": "Basic" },
       { "name": "Design Patterns", "level": "Basic" },
-      { "name": "Problem Solving", "level": "Intermediate" },
-      { "name": "Git & GitHub", "level": "Intermediate" },
-      { "name": "Communication", "level": "Basic" },
-      { "name": "Learning Agility", "level": "Intermediate" },
-      { "name": "Leadership", "level": "Basic" }
+      { "name": "Unit Testing", "level": "Basic" }
     ]
   },
   "projects": [
-    {
-      "title": "Prayer Times",
-      "alt": "Prayer Times project image",
-      "techs": [
-        { "name": "Vite", "color": "#9c5dfe" },
-        { "name": "React", "color": "#149eca" },
-        { "name": "TypeScript", "color": "#2f74c0" },
-        { "name": "API", "color": "#92d050" },
-        { "name": "Axios", "color": "#5a29e4" },
-        { "name": "Luxon", "color": "#8065b4" },
-        { "name": "Material UI", "color": "#007fff" }
-      ],
-      "links": {
-        "repo": "prayer-times",
-        "deploy": "https://salawaty.netlify.app/"
-      }
-    },
     {
       "title": "This Portfolio",
       "alt": "This Portfolio project image",
@@ -55,57 +40,6 @@
         { "name": "SASS", "color": "#c6538c" }
       ],
       "links": { "repo": "portfolio", "deploy": "" }
-    },
-    {
-      "title": "Ecommerce JS",
-      "alt": "Ecommerce JS project image",
-      "techs": [
-        { "name": "HTML", "color": "#e34c26" },
-        { "name": "CSS", "color": "#563d7c" },
-        { "name": "JavaScript", "color": "#f1e05a" },
-        { "name": "API", "color": "#92d050" }
-      ],
-      "links": { "repo": "ecommerce-js", "deploy": "github" }
-    },
-    {
-      "title": "Hangman Game",
-      "alt": "Hangman Game Project Image",
-      "techs": [
-        { "name": "HTML", "color": "#e34c26" },
-        { "name": "CSS", "color": "#563d7c" },
-        { "name": "JavaScript", "color": "#f1e05a" }
-      ],
-      "links": { "repo": "hangman-game", "deploy": "github" }
-    },
-    {
-      "title": "Quiz App",
-      "alt": "Quiz App Project Image",
-      "techs": [
-        { "name": "HTML", "color": "#e34c26" },
-        { "name": "CSS", "color": "#563d7c" },
-        { "name": "JavaScript", "color": "#f1e05a" }
-      ],
-      "links": { "repo": "quiz-app", "deploy": "github" }
-    },
-    {
-      "title": "Memory Game",
-      "alt": "Memory Game Project Image",
-      "techs": [
-        { "name": "HTML", "color": "#e34c26" },
-        { "name": "CSS", "color": "#563d7c" },
-        { "name": "JavaScript", "color": "#f1e05a" }
-      ],
-      "links": { "repo": "memory-game", "deploy": "github" }
-    },
-    {
-      "title": "Typing Test",
-      "alt": "Typing Test Project Image",
-      "techs": [
-        { "name": "HTML", "color": "#e34c26" },
-        { "name": "CSS", "color": "#563d7c" },
-        { "name": "JavaScript", "color": "#f1e05a" }
-      ],
-      "links": { "repo": "typing-speed-test", "deploy": "github" }
     }
   ]
 }
